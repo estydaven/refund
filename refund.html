@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <title>Возврат средств</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <section class="refund">
+            <h1 class="main-title">Возврат <span class="main-title__span">средств</span></h1>
+            <div class="inner inner_refund">
+                <div class="refund__block">
+                    <h2 class="refund__title">Нам <span class="refund__title__span">очень жаль...</span></h2>
+                    <img src="images/main-img.png" alt="" class="refund__image">
+                </div>
+                <div class="refund__block refund__block_second">
+                   <form class="refund-form" method="post" action="">
+                        <h3 class="refund-form__title">Заполните форму для оформления заявки</h3>
+                        <div class="refund-form__inner">
+                            <label class="refund-form__label">ФИО</label>
+                            <input type="text" class="refund-form__field" placeholder="Введите ФИО полностью">
+                            <label class="refund-form__label">Номер карты</label>
+                            <div class="refund-form__wrap">
+                                <input type="text" class="refund-form__field refund-form__field_card" placeholder="Первые 6 цифр">
+                                <input type="text" class="refund-form__field refund-form__field_card" placeholder="Последние 4 цифры">
+                            </div>
+                            <label class="refund-form__label">Дата транзакции</label>
+                            <input type="text" class="refund-form__field" placeholder="__--__--__">
+                            <label class="refund-form__label">Электронная почта</label>
+                            <input type="email" class="refund-form__field" placeholder="test@test.ru">
+                            <label class="refund-form__label">Причина возврата средств</label>
+                            <textarea placeholder="Опишите причину" class="refund-form__field refund-form__field_textarea"></textarea>
+                            <div class="refund-form__footer">
+                                <img src="images/captcha.png" class="refund-form__image" alt="">
+                                <button type="submit" class="button button_refund-form">Отправить</button>
+                            </div>           
+                        </div>
+                   </form> 
+                </div>
+            </div>
+        </section>
+        <footer class="refund-footer">
+            <div class="refund-footer__column refund-footer__column_first">
+                <p class="refund-footer__text refund-footer__text_strong">2022 - RocketProfit</p>
+                <p class="refund-footer__text">ИНН: 781425820185</p>
+                <p class="refund-footer__text">ОГРНИП: 322784700063249</p>
+                <a href="tel:+74992880172" class="refund-footer__link">Тел.: + 7 (499) 288-01-72</a>
+                <a href="mailto:support@wmarketsell.com" class="refund-footer__link">E-mail: support@wmarketsell.com</a>
+            </div>
+            <div class="refund-footer__column refund-footer__column_second">
+                <a href="" class="refund-footer__link refund-footer__link_mrg">Политика конфиденциальности</a>
+                <a href="" class="refund-footer__link refund-footer__link_mrg">Оферта</a>
+                <a href="" class="refund-footer__link">Отменить подписку</a>
+            </div>
+            <div class="refund-footer__column refund-footer__column_third">
+                <a href="" class="refund-footer__link refund-footer__link_mrg">Политика обработки данных</a>
+                <a href="" class="refund-footer__link refund-footer__link_mrg">Тариф</a>
+                <a href="" class="refund-footer__link">Возврат средств</a>
+            </div>
+            <div class="refund-footer__column refund-footer__column_fourth">
+                <p class="refund-footer__text">Принимаем к оплате</p>
+                <div class="refund-footer__logos">
+                    <img src="images/logo-1.png" alt="" class="refund-footer__logo">
+                    <img src="images/logo-2.png" alt="" class="refund-footer__logo">
+                    <img src="images/logo-3.png" alt="" class="refund-footer__logo">
+                </div>
+                <p class="refund-footer__text refund-footer__text_safe">Ваш платеж защищен</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

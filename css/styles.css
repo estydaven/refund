@@ -1,0 +1,867 @@
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+
+/* Fonts */
+@font-face {
+	font-family: 'SF UI Display';
+	src: url("../fonts/SFUIDisplay-Medium.woff2") format("woff2"), url("../fonts/SFUIDisplay-Medium.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap
+}
+
+@font-face {
+	font-family: 'SF UI Display';
+	src: url("../fonts/SFUIDisplay-Heavy.woff2") format("woff2"), url("../fonts/SFUIDisplay-Heavy.woff") format("woff");
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap
+}
+
+@font-face {
+	font-family: 'SF UI Display';
+	src: url("../fonts/SFUIDisplay-Bold.woff2") format("woff2"), url("../fonts/SFUIDisplay-Bold.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap
+}
+
+@font-face {
+	font-family: 'SF UI Display';
+	src: url("../fonts/SFUIDisplay-Regular.woff2") format("woff2"), url("../fonts/SFUIDisplay-Regular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap
+}
+
+@font-face {
+	font-family: 'SF UI Display';
+	src: url("../fonts/SFUIDisplay-Black.woff2") format("woff2"), url("../fonts/SFUIDisplay-Black.woff") format("woff");
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap
+}
+
+
+/* Common styles */
+body {
+    width: 100%;
+    background-color: #F5F5F5;
+    color: #272727;
+    font-weight: normal;
+    font-size: 16px;
+    font-family: 'SF UI Display';
+}
+.wrapper {
+    max-width: 1430px;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.inner {    
+    background-color: #fff;
+    border-radius: 50px;
+    margin-bottom: 45px;
+}
+.inner_refund {
+    display: flex;
+    padding: 70px 130px 0 0;
+}
+.inner_first {
+    padding: 21px 0 65px 0;
+}
+.inner_second {
+    padding: 56px 130px 0 130px;
+}
+.main-title {
+    position: relative;
+    padding: 35px 0 45px 0;
+    margin-left: 130px;
+    font-size: 17px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+.main-title__span {
+    color: #2F37FE;
+}
+.main-title:after {
+    content: '';
+    position: absolute;
+    top: 62px;
+    left: 0;
+    display: block;
+    width: 21px;
+    height: 4px;
+    background-color: #2F37FE;
+}
+.main-title_subscribe {
+    font-size: 50px;
+    line-height: 50px;
+    letter-spacing: -4px;
+    text-transform: none;
+    font-weight: 400;
+}
+.main-title__span_subscribe {
+    display: block;
+    font-weight: 700;
+    color: #272727;
+}
+.main-title_subscribe::after {
+    display: none;
+}
+.button {
+    width: 200px;
+    border: 2px solid #2F37FE;
+    border-radius: 8px;
+    padding: 19px 5px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #2F37FE;
+    background-color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .3s linear;
+}
+.button:hover {
+    color: #fff;
+    background-color: #2F37FE;
+}
+.button_unsubscribe {
+    width: 279px;
+    letter-spacing: 1px;
+}
+
+/* Refund styles */
+.refund__title {
+    padding-left: 130px;
+    margin-bottom: 15px;
+    font-size: 80px; 
+    line-height: 80px; 
+    letter-spacing: -4px;  
+}
+.refund__title__span {
+    display: block;
+}
+.refund__image {
+    display: block;
+    position: absolute;
+    bottom: 0;
+}
+.refund__block {
+    position: relative;
+    width: calc(100% - 485px);
+}
+.refund__block_second {
+    width: 470px;
+    margin-left: 15px;
+}
+.refund-form__title {
+    position: relative;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 48px;
+}
+.refund-form__title::after {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 8px;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background-image: url(../images/arr-down.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.refund-form__inner {
+    display: flex;
+    flex-direction: column;
+}
+.refund-form__label {
+    font-weight: 700;
+    color: #5F5F5F;
+    margin-bottom: 13px;
+}
+.refund-form__field {
+    width: 100%;
+    padding: 15px 24px;
+    background-color: #F4F4F4;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+    margin-bottom: 25px;
+    outline: none;
+}
+.refund-form__field::placeholder {
+    color: #a1a1a1;
+}
+.refund-form__wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.refund-form__field_card {
+    width: 213px;
+}
+.refund-form__field_textarea {
+    height: 96px;
+    resize: none;
+    font-family: 'SF UI Display';
+}
+.refund-form__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F9F9F9;
+    border-radius: 8px;
+    padding: 5px 0 5px 19px;
+    margin-bottom: 50px;
+}
+
+/* Subscribe styles */
+.subscribe__block {
+    max-width: 1195px;
+    margin: 0 auto;
+}
+.tabs {
+    position: relative;
+}
+.tabs>input[type="radio"] {
+    display: none;
+}
+.tabs__content {
+    display: none;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 45px;
+}
+#tab-btn-1:checked~#content-1,
+#tab-btn-2:checked~#content-2 {
+    display: block;
+}
+.tabs>label {
+    width: 163px;
+    display: inline-block;
+    text-align: center;
+    user-select: none;
+    background-color: #fff;
+    border-bottom: 1px solid #EEEEEE;
+    font-size: 14px;
+    line-height: 50px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-left: 35px;
+    cursor: pointer;
+    position: absolute;
+    top: -65px;
+    right: 164px;
+    padding-bottom: 15px;
+    transition: all .1s linear;
+}
+.tabs>label:not(:first-of-type) {
+    right: 0;
+}
+.tabs__label::before {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 20px;
+    background-image: url(../images/email.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    left: 28px;
+    top: 14px;
+}
+.tabs__label_second::before {
+    background-image: url(../images/card.svg);
+}
+.tabs>input[type="radio"]:checked+label {
+    border-bottom: 2px solid #2F37FE;
+}
+.tabs>input[type="radio"]:checked+label::before {
+    filter: invert(80%) sepia(80%) saturate(4496%) hue-rotate(240deg) brightness(96%) contrast(110%);
+}
+.subscribe {
+    border-bottom: 1px solid #EEEEEE;
+    margin-bottom: 35px;
+}
+.subscribe:last-child {
+    border-bottom: 0;
+    margin-bottom: 0;
+}
+.subscribe__block {
+    display: flex;
+    justify-content: space-between;
+}
+.subscribe__info {
+    padding-top: 55px;
+}
+.subscribe__title {
+    font-size: 33px;
+    line-height: 39px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.subscribe__title__span {
+    display: block;
+}
+.subscribe__text {
+    font-size: 20px;
+    line-height: 30px;
+    color: #818181;
+}
+.subscribe__text_mrg {
+    margin-bottom: 30px;
+}
+.unsubscribe-title {
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 500;
+    letter-spacing: -2px;
+    margin-bottom: 25px;
+}
+.unsubscribe {
+    display: flex;
+    justify-content: space-between;
+}
+.refund-form__label_subscribe {
+    display: block;
+}
+.unsubscribe__block_form {
+    width: 470px;
+}
+.unsubscribe__image {
+    display: block;
+}
+.dotted {
+    line-height: 27px;
+    font-size: 30px;
+    color: #EAEAEA;
+    font-weight: 700;
+}
+.unsubscribe__text {
+    position: relative;
+    font-size: 15px;
+    line-height: 21px;
+    padding-left: 43px;
+}
+.unsubscribe__text_first {
+    margin: 15px 0 28px 0;
+}
+.unsubscribe__text_second {
+    margin-bottom: 40px;    
+}
+.unsubscribe__text::before {
+    content: '';
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    display: block;
+    position: absolute;
+    left: 0;
+}
+.unsubscribe__text_first::before {
+    background-image: url(../images/shield.svg);
+    width: 18px;
+    height: 22px;
+    top: 20px;
+}
+.unsubscribe__text_second::before {
+    background-image: url(../images/data.svg);
+    width: 22px;
+    height: 18px;
+    top: 0;
+}
+
+/* Footer styles */
+.refund-footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #42454E;
+    border-radius: 50px 50px 0 0;
+    color: #fff;
+    padding: 45px 55px 45px 130px;
+    font-size: 13px;
+}
+.refund-footer__column {
+    width: 225px;
+}
+.refund-footer__column_first {
+    line-height: 23px;
+}
+.refund-footer__text_strong {
+    font-weight: 700;
+}
+.refund-footer__link {
+    display: block;
+    color: #fff;
+    transition: all .3s linear;
+}
+.refund-footer__link:hover {
+    opacity: 0.6;
+}
+.refund-footer__link_mrg {
+    margin-bottom: 32px;
+}
+.refund-footer__logos {
+    margin: 6px 0 13px 0;
+}
+.refund-footer__logo {
+    opacity: 0.4;
+}
+.refund-footer__text_safe {
+    position: relative;
+    padding-left: 20px;
+}
+.refund-footer__text_safe::before {
+    content: '';
+    display: block;
+    width: 11px;
+    height: 13px;
+    background-image: url(../images/safe.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    left: 0;
+}
+
+/* Media queries */
+@media (max-width: 1430px) {
+    .wrapper {
+        margin: 0 20px;
+    }
+    .inner_second {
+        padding: 56px 80px 0 80px;
+    }
+    .subscribe__block {
+        max-width: 100%;
+        padding: 0 80px;
+    }
+    .main-title_subscribe {
+        margin-left: 80px;
+    }
+    .subscribe__image {
+        object-fit: contain;
+    }
+}
+@media (max-width: 1300px) {
+    .inner_refund {
+        padding: 30px 50px 0 0;
+    }
+    .refund__title {
+        padding-left: 50px;
+        margin-bottom: 0;
+    }
+    .refund-footer {
+        padding: 45px 50px 45px 50px;
+    }
+    .unsubscribe__block_form {
+        margin-left: 20px;
+    }
+}
+@media (max-width: 1100px) {
+    .main-title_subscribe {
+        margin-left: 0;
+        padding: 25px 0;
+        font-size: 40px;
+        line-height: 40px;
+        letter-spacing: -2px;
+    }
+    .main-title__span_subscribe {
+        display: inline;
+    }
+    .inner_first {
+        padding: 30px;
+    }
+    .subscribe__block {
+        padding: 0;
+    }
+    .subscribe__info {
+        width: 48%;
+        padding-top: 30px;
+    }
+    .subscribe__image {
+        width: 50%;
+    }
+    .inner_second {
+        padding: 20px 30px 0 30px;
+    }
+    .unsubscribe-title {
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .button_unsubscribe {
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 970px) {
+    .subscribe__title {
+        font-size: 25px;
+        line-height: 25px;
+        margin-bottom: 16px;
+    }
+    .subscribe__text {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .tabs>label {
+        padding-bottom: 0;
+        top: -50px;
+    }
+    .unsubscribe-title {
+        margin-bottom: 15px;
+    }
+}
+@media (max-width: 900px) {
+    .inner_refund {
+        flex-direction: column;
+    }
+    .main-title {
+        margin-left: 0;
+    }
+    .refund__image {
+        display: none;
+    }
+    .refund__block {
+        width: 100%;
+        text-align: center;
+    }
+    .refund__title {
+        padding-left: 0;
+        margin-bottom: 10px;
+        font-size: 60px;
+        line-height: 60px;
+    }
+    .inner_refund {
+        padding: 30px 37px 30px 37px;
+    }
+    .refund__block_second {
+        margin-left: 0;
+    }
+    .refund-form__title {
+        display: inline-block;
+    }
+    .refund-form__inner {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+    .refund-form__label {
+        text-align: left;
+    }
+    .refund-form__wrap {
+        justify-content: flex-start;
+    }
+    .refund-form__field_card:first-child {
+        margin-right: 24px;
+    }
+    .refund-form__field_card-sub {
+        margin-right: 0 !important;
+    }
+    .refund-footer {
+        flex-wrap: wrap;
+        padding: 30px 30px 0 30px;
+    }
+    .refund-footer__column {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+    .refund-footer__link_mrg {
+        margin-bottom: 10px;
+    }
+}
+@media (max-width: 768px) {
+    .main-title {
+        padding: 18px 0 33px 0;
+    }
+    .main-title:after {
+        top: 49px;
+    }
+    .main-title {
+        padding: 15px 0;
+        font-size: 25px;
+    }
+    .unsubscribe {
+        flex-direction: column;
+        align-items: center;
+    }
+    .tabs__content {
+        padding-top: 30px;
+    }
+    .unsubscribe__image {
+        border-radius: 50px;
+        margin-bottom: 25px;
+    }
+    .button_unsubscribe {
+        margin-bottom: 40px;
+    }
+    .refund-form__field_card-sub {
+        margin-right: 0;
+    }
+    .dotted {
+        margin: 0 10px;
+    }
+    .subscribe__block {
+        flex-direction: column;
+    }
+    .subscribe__info {
+        width: 100%;
+        padding: 0 30px;
+        order: 1;
+    }
+    .subscribe__image {
+        width: 100%;
+        order: 2;
+        padding: 0 30px;
+    }
+    .inner_first {
+        padding: 35px 0;
+    }
+}
+@media (max-width: 680px) {
+    .unsubscribe-title {
+        font-size: 26px;
+        line-height: 50px;
+        margin-bottom: 50px;
+        padding-left: 30px;
+    }
+    .inner_second {
+        padding: 30px 0 0 0;
+    }
+    .tabs>label {
+        width: 50%;
+        right: auto;
+    }
+    .tabs__label::before {
+        left: 50px;
+    }
+}
+@media (max-width: 650px) {
+    .main-title {
+        font-size: 14px;
+    }
+    .main-title:after {
+        top: 45px;
+    }
+    .refund__title {
+        text-align: left;
+        font-size: 40px;
+        line-height: 40px;
+        letter-spacing: -2px;
+    }
+    .refund-form__title {
+        display: block;
+        text-align: left;
+        margin-bottom: 34px;
+        font-size: 16px;
+    }
+    .refund-form__title::after {
+        top: 24px;
+    }
+    .refund-form__inner {
+        max-width: 100%;
+    }
+    .refund-form__field_card:first-child {
+        margin-right: 0;
+    }
+    .refund-form__wrap {
+        justify-content: space-between;
+    }
+    .refund-form__label {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+    .refund-form__field {
+        padding: 14px 20px;
+        font-size: 12px;
+        margin-bottom: 18px;
+    }
+    .refund-form__field_textarea {
+        height: 136px;
+    }
+    .refund-form__footer {
+        margin-bottom: 0;
+    }
+    .refund-form__image {
+        display: none;
+    }
+    .refund-form__footer {
+        background-color: transparent;
+        padding: 0;
+    }
+    .button_refund-form {
+        width: 100%;
+    }
+    .refund-footer__column {
+        width: 100%;
+        text-align: center;
+    }
+    .refund-footer {
+        padding: 30px 0 0 0;
+    }
+    .refund-footer__column_first {
+        padding-bottom: 30px;
+        border-bottom: 1px solid #545559;
+    }
+    .refund-footer__column_second {
+        margin-bottom: 15px;
+    }
+    .refund-footer__link_mrg {
+        margin-bottom: 15px;
+    }
+    .refund-footer__column_third {
+        padding-bottom: 30px;
+        border-bottom: 1px solid #545559;
+    }    
+    .refund-footer__text_safe {
+        display: inline-block;
+    }
+    .main-title_subscribe {
+        font-size: 25px;
+        letter-spacing: -1px;
+    }
+    .unsubscribe__block_form {
+        margin-left: 0;
+        width: 100%;
+        padding: 0 30px;
+    }
+    .unsubscribe__block {
+        padding: 0 30px;
+    }
+}
+@media (max-width: 550px) {
+    .refund-form__field_card {
+        width: 180px;
+    }
+}
+@media (max-width: 480px) {
+    .refund-form__field_card {
+        width: 150px;
+    }
+    .refund-form__field {
+        padding: 14px 10px;
+    }
+    .subscribe__title {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+    .subscribe__text {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    .unsubscribe-title {
+        margin-bottom: 65px;
+    }
+}
+@media (max-width: 449px) {
+    .inner_refund {
+        padding: 30px 20px;
+    }
+}
+@media (max-width: 420px) {
+    .refund-form__field_card {
+        width: 130px;
+    }
+    .tabs__label::before {
+        left: 25px;
+    }
+    .button_unsubscribe {
+        width: 100%;
+    }
+    .dotted {
+        margin: 0 5px;
+        font-size: 23px;
+    }
+}
+@media (max-width: 415px) {
+    .refund-form__title::after {
+        top: 45px;
+    }
+}
+@media (max-width: 370px) {
+    .unsubscribe__block {
+        padding: 0 10px;
+    }
+    .unsubscribe__block {
+        padding: 0 10px;
+    }
+    .inner_second {
+        padding: 10px 0 0 0;
+    }
+}
+@media (max-width: 360px) {
+    .refund__title {
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .refund-form__title {
+        font-size: 14px;
+    }
+    .refund-form__title::after {
+        top: 40px;
+    }
+    .wrapper {
+        margin: 0 10px;
+    }
+    .inner_refund {
+        padding: 20px 15px;
+    }
+    .refund-form__field_card {
+        width: 115px;
+    }
+    .refund-form__field {
+        font-size: 11px;
+    }
+    .refund__title__span {
+        display: inline;
+    }
+    .unsubscribe__text {
+        font-size: 11px;
+        line-height: 19px;
+        padding-left: 36px;
+        margin: 0 0 20px 0;
+    }
+    .unsubscribe-title {
+        letter-spacing: -1px;
+        margin-bottom: 50px;
+    }
+    .tabs__label::before {
+        left: 17px;
+    }
+    .unsubscribe__image {
+        border-radius: 25px;
+    }
+    .inner_first {
+        padding: 25px 0;
+    }
+    .subscribe__info {
+        padding: 0 15px;
+    }
+    .subscribe__image {
+        padding: 0 15px;
+    }
+    .main-title {
+        padding: 10px 0;
+        font-size: 22px;
+    }
+}

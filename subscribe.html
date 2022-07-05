@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <title>Управление подписками</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <section class="subscription">
+            <h1 class="main-title main-title_subscribe">Управление <span
+                    class="main-title__span main-title__span_subscribe">подписками</span></h1>
+            <div class="inner inner_first">
+                <div class="subscribe">
+                    <div class="subscribe__block">
+                        <div class="subscribe__info">
+                            <h3 class="subscribe__title">Где я нахожусь <span class="subscribe__title__span">в данный
+                                    момент?</span></h3>
+                            <p class="subscribe__text">Это страница по управлению подписками, а также мы ответим на
+                                самые распространенные вопросы</p>
+                        </div>
+                        <img src="images/image-1.png" class="subscribe__image" alt="">
+                    </div>
+                </div>
+                <div class="subscribe">
+                    <div class="subscribe__block">
+                        <img src="images/image-2.png" class="subscribe__image" alt="">
+                        <div class="subscribe__info">
+                            <h3 class="subscribe__title">Почему без моего согласия <span
+                                    class="subscribe__title__span">была совершена оплата?</span></h3>
+                            <p class="subscribe__text">На сайте Вы оформили пробную подписку, которая продлевается
+                                автоматически на несколько дней или неделю с помощью рекуррентного платежа, с которым вы
+                                согласились при оплате.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="subscribe">
+                    <div class="subscribe__block">
+                        <div class="subscribe__info">
+                            <h3 class="subscribe__title">Как это так без <span
+                                    class="subscribe__title__span">подтверждения по смс?</span></h3>
+                            <p class="subscribe__text subscribe__text_mrg">Мы используем рекуррентные платежи, также
+                                известные как рекарринговые платежи или «автоплатежи» — это возможность выполнять
+                                регулярные списания денег с банковской карты покупателя или электронного кошелька без
+                                повторного ввода реквизитов карты и без участия плательщика для инициации очередного
+                                платежа.</p>
+                            <p class="subscribe__text">Рекарринговые платежи используют так же такие компании как
+                                Яндекс, Google, Amazon, IVI, Netflix и многие другие.</p>
+                        </div>
+                        <img src="images/image-3.png" class="subscribe__image" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="inner inner_second">
+                <h3 class="unsubscribe-title">Выберите способ</h3>
+                <div class="tabs">
+                    <input type="radio" class="tabs__radio" name="tab-btn" id="tab-btn-1" value="" checked>
+                    <label for="tab-btn-1" class="tabs__label">Почта</label>
+                    <input type="radio" class="tabs__radio" name="tab-btn" id="tab-btn-2" value="">
+                    <label for="tab-btn-2" class="tabs__label tabs__label_second">Карта</label>
+                    <div id="content-1" class="tabs__content">
+                        <div class="unsubscribe">
+                            <div class="unsubscribe__block">
+                                <img src="images/image-email.png" class="unsubscribe__image" alt="">
+                            </div>
+                            <form class="unsubscribe__block unsubscribe__block_form" method="post" action="">
+                                <label class="refund-form__label refund-form__label_subscribe">Ваша почта</label>
+                                <input type="email" class="refund-form__field" placeholder="test@test.ru">
+                                <button type="submit" class="button button_unsubscribe">Отписаться</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div id="content-2" class="tabs__content">
+                        <div class="unsubscribe">
+                            <div class="unsubscribe__block">
+                                <img src="images/image-card.png" class="unsubscribe__image" alt="">
+                            </div>
+                            <form class="unsubscribe__block unsubscribe__block_form" method="post" action="">
+                                <label class="refund-form__label refund-form__label_subscribe">Номер карты</label>
+                                <div class="refund-form__wrap">
+                                    <input type="text" class="refund-form__field refund-form__field_card refund-form__field_card-sub" placeholder="Первые 6 цифр">
+                                    <div class="dotted">...</div>
+                                    <input type="text" class="refund-form__field refund-form__field_card" placeholder="Последние 4 цифры">
+                                </div>
+                                <p class="unsubscribe__text unsubscribe__text_first">Все данные передаются по зашифрованному каналу с использованием протокола TLS. Использование данной страницы абсолютно безопасно.</p>
+                                <p class="unsubscribe__text unsubscribe__text_second">Указывается только часть данных, это безопасно</p>
+                                <button type="submit" class="button button_unsubscribe">Отписаться</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="refund-footer">
+            <div class="refund-footer__column refund-footer__column_first">
+                <p class="refund-footer__text refund-footer__text_strong">2022 - RocketProfit</p>
+                <p class="refund-footer__text">ИНН: 781425820185</p>
+                <p class="refund-footer__text">ОГРНИП: 322784700063249</p>
+                <a href="tel:+74992880172" class="refund-footer__link">Тел.: + 7 (499) 288-01-72</a>
+                <a href="mailto:support@wmarketsell.com" class="refund-footer__link">E-mail: support@wmarketsell.com</a>
+            </div>
+            <div class="refund-footer__column  refund-footer__column_second">
+                <a href="" class="refund-footer__link refund-footer__link_mrg">Политика конфиденциальности</a>
+                <a href="" class="refund-footer__link refund-footer__link_mrg">Оферта</a>
+                <a href="" class="refund-footer__link">Отменить подписку</a>
+            </div>
+            <div class="refund-footer__column refund-footer__column_third">
+                <a href="" class="refund-footer__link refund-footer__link_mrg">Политика обработки данных</a>
+                <a href="" class="refund-footer__link refund-footer__link_mrg">Тариф</a>
+                <a href="" class="refund-footer__link">Возврат средств</a>
+            </div>
+            <div class="refund-footer__column refund-footer__column_fourth">
+                <p class="refund-footer__text">Принимаем к оплате</p>
+                <div class="refund-footer__logos">
+                    <img src="images/logo-1.png" alt="" class="refund-footer__logo">
+                    <img src="images/logo-2.png" alt="" class="refund-footer__logo">
+                    <img src="images/logo-3.png" alt="" class="refund-footer__logo">
+                </div>
+                <p class="refund-footer__text refund-footer__text_safe">Ваш платеж защищен</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
